@@ -1,0 +1,14 @@
+  <main class="container">
+    {{#each notes}}
+      <article>
+        <h2>{{title}}</h2>
+        <section>
+          <p>{{content}}</p>
+        </section>
+        <footer>
+          <h5>Author: {{username}}</h5>
+          <span>created: {{created}}</span>
+        </footer>
+      </article>
+    {{/each}}
+  </main>
