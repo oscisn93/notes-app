@@ -45,6 +45,9 @@ app.get("/signin", (req, res) => {
   res.render("signin");
 });
 
+
+// TODO: investigate why redirects on 
+// failed logins/sigups reset headers
 app.post("/login", (req, res) => {
   const { users } = require("./db");
 
