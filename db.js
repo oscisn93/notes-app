@@ -1,3 +1,4 @@
+const uuid = require("uuid").v4;
 const db = {
   users: [
     {
@@ -7,6 +8,7 @@ const db = {
   ],
   notes: [
     {
+      id: uuid(),
       username: "oscar",
       title: "Building an Express.js Authenticated Notes App",
       content:

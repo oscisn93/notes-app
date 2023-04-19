@@ -1,14 +1,41 @@
-  <main class="container">
-    {{#each notes}}
-      <article>
-        <h2>{{title}}</h2>
-        <section>
-          <p>{{content}}</p>
-        </section>
-        <footer>
-          <h5>Author: {{username}}</h5>
-          <span>created: {{created}}</span>
-        </footer>
-      </article>
-    {{/each}}
-  </main>
+<main class="container">
+  {{#each notes}}
+    <article>
+      <h2>{{title}}</h2>
+      <section>
+        <p>{{content}}</p>
+      </section>
+      <footer>
+        <h5>Author: {{username}}</h5>
+        <span>created: {{created}}</span>
+      </footer>
+    </article>
+  {{/each}}
+  <section>
+    <h3>Add New Note</h3>
+    <form action="/notes" method="post">
+      <label for="title">
+        Title
+        <input type="text" name="title" id="title" />
+      </label>
+      <label for="content">
+        Content
+        <textarea
+          name="content"
+          id="content"
+          cols="30"
+          rows="10"
+          placeholder="Entrer content..."
+        ></textarea>
+      </label>
+      <input type="submit" value="+">
+    </form>
+  </section>
+  <footer>
+    <a href="/logout">
+      <button>
+        Logout
+      </button>
+    </a>
+  </footer>
+</main>
